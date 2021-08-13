@@ -1,0 +1,13 @@
+<mat-card class="example-card">
+  <mat-card-header class="blue">
+    <mat-card-title>
+      <div>
+        <mat-icon>calendar_today</mat-icon> {{msgObj.dateCreated|date:'shortTime'}} | {{msgObj.dateCreated|date:'mediumDate'}}
+      </div>
+      <mat-icon>more_vert</mat-icon>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    {{msgObj.msg}}
+  </mat-card-content>
+</mat-card>

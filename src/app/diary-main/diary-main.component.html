@@ -1,0 +1,24 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      <div class="blue">Your Diary</div>
+      <div class="blue">
+        <mat-icon aria-hidden="false" aria-label="forward">arrow_forward</mat-icon>
+      </div>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <textarea [formControl]="messageCtrl" matInput rows="5" placeholder="Write something"></textarea>
+    <emoji-mart (emojiSelect)="addEmoji($event)" class="emoji-mart" *ngIf="isEmojiPickerVisible" title="Choose your emoji"></emoji-mart>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-icon *ngIf="isEmojiPickerVisible" (click)="isEmojiPickerVisible = false;" class="blue" aria-label="keyboard icon">keyboard</mat-icon>
+    <mat-icon *ngIf="!isEmojiPickerVisible" (click)="isEmojiPickerVisible = true;" class="blue" aria-hidden="false" aria-label="emotion icon">insert_emoticon</mat-icon>
+    <button mat-raised-button color="primary" (click)="addMessage()">Save</button>
+  </mat-card-actions>
+  <ul>
+    <li *ngFor="let message of messages">
+      <app-message [msgObj]="message"></app-message>
+    </li>
+  </ul>
+</mat-card>

@@ -1,0 +1,28 @@
+.example-card {
+  max-width: 400px;
+  margin: 3rem auto;
+  border-radius: 10px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-color: #F7F8F9;
+  padding: 1rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-card-actions mat-icon {
+  cursor: pointer
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}

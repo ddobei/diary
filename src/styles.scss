@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #E5E5E5;
+}
+
+mat-card.example-card {
+  .mat-card-header .mat-card-title {
+    font-size: 14px;
+  }
+
+  .mat-card-header-text {
+    width: 100%;
+    margin: 0;
+  }
+  .mat-card-actions {
+    margin: 0;
+  }
+  .mat-raised-button {
+    border-radius: 15px;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    background-color: #224272;
+  }
+  mat-card-title, mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  .blue {
+    color: #3E52BE;
+  }
+  app-message * {
+    font-size: 10px;
+  }
+  app-message .mat-icon {
+    font-size: 14px;
+    height: 14px ;
+    width: 14px;
+  }
+  app-message mat-card {
+    background-color: #F7F8F9;
+    border-radius: 10px;
+  }
+}
